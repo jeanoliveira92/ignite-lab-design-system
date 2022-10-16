@@ -1,2 +1,2 @@
-# ignitelabreact
-Ignite Lab React
+# ignite-lab-design-system
+ignite lab design system
