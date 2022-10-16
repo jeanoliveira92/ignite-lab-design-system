@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  
 
     steps:
       - name: Checkout
@@ -26,7 +26,7 @@ jobs:
 
       - name: Deploy Storybook
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
-      
+
       - name: Variaveis de ambiente
         env:
-        GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
