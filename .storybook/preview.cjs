@@ -3,6 +3,9 @@ import { themes } from '@storybook/theming';
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 
 import '../src/styles/global.css';
+
+const isDevelopment = window.CONFIG_TYPE === 'DEVELOPMENT';
+
 // Initialize MSW
 initialize({
   onUnhandledRequest: 'bypass',
