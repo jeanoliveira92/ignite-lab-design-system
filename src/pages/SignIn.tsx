@@ -12,10 +12,10 @@ import axios from 'axios';
 export function SignIn() {
     const [isUserSignedIn, setIsUserSignedIn] = useState(false);
 
-    function handleSignIn(event: FormEvent) {
+    async function handleSignIn(event: FormEvent) {
         event.preventDefault();
 
-        axios.post('/sessions', {
+        const response = await axios.post('/sessions', {
             email: 'diego@rocketseat.com.br',
             password: '123456789'
         })
