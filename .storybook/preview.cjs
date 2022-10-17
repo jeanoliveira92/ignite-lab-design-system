@@ -5,7 +5,10 @@ import { initialize, mswDecorator } from 'msw-storybook-addon';
 import '../src/styles/global.css';
 // Initialize MSW
 initialize({
-  onUnhandledRequest: 'bypass'
+  onUnhandledRequest: 'bypass',
+  serviceWorker: {
+    url: isDevelopment ? 'mockServiceWorker.js' : '/ignite-lab-design-system/mockServiceWorker.js'
+  }
 });
 
 // Provide the MSW addon decorator globally
